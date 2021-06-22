@@ -1,60 +1,105 @@
 'use strict';
-const _Name = prompt("Hello. what is your name" )
-alert("wellcome "+ _Name)
-console.log(_Name)
+const _Name = prompt("Hello. what is your name" );
+alert("wellcome "+ _Name);
+console.log(_Name);
+let score=0;
+let _YorN1 = prompt('1. tell me one of my favorite colors. You have 6 attempts', 'red, green, blue, brown');
+console.log(_YorN1);
+let possibleAnswers = ['red', 'blue', 'orange', 'black',]
+console.log(possibleAnswers);
+for (let i = 0; i < 6; i++) {
+    if(_YorN1==possibleAnswers[0] || _YorN1==possibleAnswers[3]){
+        alert('Correct!!')
+        score++
+        break;
+    }else
+    _YorN1 = prompt('try again');
+   
+    console.log(i);
+    console.log(_YorN1);
+}
+alert('Here is all my favorite colors: '+ possibleAnswers[0]+',  '+possibleAnswers[3] )
+console.log(_YorN1);
 
-let _YorN = prompt('Did you know my name? Answer with "yes" or "no"/ "y" or "n".')
+let _YorN2 = prompt('2. How old I am? You have 4 attempts', '25, 18, 23, 30' );
+for(let i=0; i<4 ; i++){
+    if(parseInt(_YorN2)==23){
+    alert('correct')
+    score++
+    break;}
+    else if (parseInt(_YorN2)<=18){
+        alert('Too low')
+        _YorN2 = prompt('2. How old I am?', '25, 18, 23, 30' );
+    }
+    else if (parseInt(_YorN2)>=30){
+        alert('Too high')
+        _YorN2 = prompt('2. How old I am?', '25, 18, 23, 30' );
+    }else
+    _YorN2 = prompt('Try again');
+    console.log(i);
+}
 
-
-function yesOrno(a, b, c,){
-switch(_YorN.toLowerCase()){
+console.log(_YorN2);
+let _YorN3 = prompt('3. Do I like Hello catty TV show? ', '(Y)es or (N)o');
+switch(_YorN3.toLowerCase()){
     case 'yes':
-    case 'y' :
-    console.log(_YorN);
-    alert(a)
-        break
-    a
+    case 'y': 
+    alert('Absolutely wrong')
+    break;
     case 'no' :
-    case 'n'  :  
-    console.log(_YorN);
-    alert(b)
-    break
-
-    default: 
-    console.log(_YorN);
-    alert(c)
+    case 'n' :
+        alert('Correct') 
+        score++     
+         
 }
+console.log(_YorN3);
+ let _YorN4 = prompt('4. Do I like The waling dead series', '(Y)es or (N)o');
+ switch(_YorN4.toLowerCase()){
+    case 'yes':
+    case 'y': 
+    alert('Correct ')
+    score++   
+    break;
+    case 'no' :
+    case 'n' :
+        alert('Wrong') 
+           
 }
-yesOrno(
-    'I don\'t think so, I am not famous yet ;p.',
-    'Ok, I\'ll give you a hint.', 
-    'you want to spoil it, ha?! '+'!!!!'+_YorN+'!!!!', );
-    
-_YorN = prompt('It is begins with \"O\". Did you get it yet? "yes" or "no"/ "y" or "n".')
-yesOrno(
-    'Come on! there is alot of names begin with O, I\'ll give you another hint. Om\*\*',
-    'It is Ok, I\'ll give you another hint. Om\*\*',
-    'Do not spoil it, play fair'
-
-)
-_YorN = prompt('Still hard for you to know, ha? ')
-yesOrno(
-    'Another one. Oma* just add one character.',
-    'then what is my name?',
-    'Don\'t be silly just "y"/"n"',
-)
-
-let myName = prompt('So, my name is ....')
-switch(myName.toLowerCase()){
-    case 'omar':
-        console.log(myName);
-        alert('Finaly!! It is correct thank you.')
-        break
-    default:
-        console.log(myName);
-        alert('I can not make it easer. I\'m done. It is Omar')
-
+console.log(_YorN4);
+ let _YorN5 = prompt('5. Do i have an experience at phones and computers ', '(Y)es or (N)o');
+ switch(_YorN5.toLowerCase()){
+    case 'yes':
+    case 'y': 
+    alert('Correct')
+    score++
+    break;
+    case 'no' :
+    case 'n' :
+        alert('Wrong') 
+              }
+console.log(_YorN5);           
+ let _YorN6 = prompt('6. Did i work at a factory', '(Y)es or (N)o');
+ switch(_YorN6.toLowerCase()){
+    case 'yes':
+    case 'y': 
+    alert('No, I didn\'t')
+    break;
+    case 'no' :
+    case 'n' :
+        alert('Correct') 
+        score++      
 }
-
-alert('Thank you '+ _Name + ' for your patience')
-
+console.log(_YorN6);
+ let _YorN7 = prompt('7. Am I an Engineer?', '(Y)es or (N)o');
+ switch(_YorN7.toLowerCase()){
+    case 'yes':
+    case 'y': 
+    alert('No I studied English language and literature')
+    break;
+    case 'no' :
+    case 'n' :
+        alert('Correct') 
+        score++      
+}
+console.log(_YorN7);
+alert('Thank you '+ _Name + ', Your score is ' + score+ ' out of 7');
