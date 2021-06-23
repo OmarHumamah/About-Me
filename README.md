@@ -7,3 +7,8 @@
 * alert the summation of the correct answers as score out of 7.
 * add unordered list for my jop experiences, and ordered list for my top ten entertainment shows to HTML page.
 * I have styled them with colors and font-wight.
+
+
+This is Omar's repo so he is the Navigator.
+
+I am Musaab I'll be the Driver to do some changes.
