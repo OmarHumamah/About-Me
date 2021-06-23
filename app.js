@@ -6,25 +6,26 @@ let score=0;
 
 
 function questionNumber1(){
-    let _YorN1 = prompt('1. tell me one of my favorite colors. You have 6 attempts', 'red, green, blue, brown');
-    console.log(_YorN1);
+    
     let possibleAnswers = ['red', 'blue', 'orange', 'black',];
-    console.log(possibleAnswers);
+    
+    
     for (let i = 0; i < 6; i++) {
-        if(_YorN1==possibleAnswers[0] || _YorN1==possibleAnswers[3]){
+        let _YorN1 = prompt('1. tell me one of my favorite colors. You have 6 attempts', 'red, green, blue, brown');
+    console.log(_YorN1);
+        for (let j = 0; j < possibleAnswers.length; j++){
+           
+        if(_YorN1==possibleAnswers[j]){
+
             alert('Correct!!');
             score++;
+            i=7
             break;
-        }else
-        _YorN1 = prompt('try again');
-       
-        console.log(i);
-        
+        }
     }
-
-    console.log(_YorN1);
+}
     
-    alert('Here is all my favorite colors: '+ possibleAnswers[0]+',  '+possibleAnswers[3] );
+    alert('Here is all my favorite colors: '+ possibleAnswers);
 }
 
 
